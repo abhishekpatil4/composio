@@ -29,3 +29,9 @@ Two concrete ways an admin can approve are:
 Microsoft may also show an in-flow `sign in as an admin` / `Connectez-vous avec ce compte` option on the OAuth screen. Treat that as a secondary path, not the first recommendation. If an admin signs in through the same OAuth attempt, that attempt may connect the admin's mailbox instead of the original user's mailbox. After tenant-wide consent is granted, the original user should start a fresh Outlook connection flow with their own account.
 
 For custom Microsoft OAuth apps, a verified publisher can improve branding and may reduce consent friction in tenants that allow user consent for verified publishers and the requested delegated permissions. It does not remove the admin-consent requirement in every tenant; each Microsoft 365 tenant's user-consent policy and the exact scopes requested still decide whether admin approval is needed.
+
+## Why does Microsoft OAuth require a multitenant Azure app?
+
+For user OAuth connections, this toolkit uses Microsoft's `/common` authorization endpoint. If your Microsoft Entra app registration is set to **Single tenant**, OAuth may not complete for users outside that tenant, the connected account can remain `INITIATED`, and Test Connection will fail because the account is not yet `ACTIVE`.
+
+In Microsoft Entra / Azure Portal, open the app registration, go to **Authentication**, and set **Supported account types** to **Accounts in any organizational directory** / **Multitenant**. Save the change, then start a fresh connection.
