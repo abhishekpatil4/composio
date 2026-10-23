@@ -4,7 +4,7 @@ description: "Reconnect with a v4 API key and migrate from retired Semrush tool 
 date: "2026-10-23"
 ---
 
-The native `semrush` toolkit is planned to move from Semrush API v3 to v4 on **November 1, 2026**. Semrush has deprecated its v3 Backlinks and Keyword Reports methods. This update replaces the native toolkit's v3 tools with v4 operations.
+The native `semrush` toolkit is planned to move from Semrush API v3 to v4 on **November 1, 2026**. Semrush has deprecated its v3 Backlinks and Keyword Reports methods.
 
 <Callout type="warn">
 **Breaking change**
@@ -12,7 +12,7 @@ The native `semrush` toolkit is planned to move from Semrush API v3 to v4 on **N
 The updated toolkit requires a Semrush v4 API key. Existing v3 credentials and connections won't work with it. You or your users will need a new v4 key and must reconnect after the update.
 </Callout>
 
-You can also use the separate `semrush_mcp` toolkit in the interim. Its setup and available tools differ from the native toolkit.
+Alternatively, you can use the [Semrush MCP toolkit](/toolkits/semrush_mcp). Its setup and available tools differ from the native toolkit.
 
 ### Reconnect your Semrush accounts
 
@@ -20,7 +20,7 @@ You can also use the separate `semrush_mcp` toolkit in the interim. Its setup an
 
 ### Old and new tool slugs
 
-The table lists all 37 old slugs and their replacements. Tools marked "No v4 replacement" have no documented equivalent in Semrush's v4 API and will be removed from the native toolkit. Some v3-only reports remain available from Semrush, but this toolkit is moving to v4 only.
+The table lists all 37 old slugs and their replacements. Tools marked "No v4 replacement" have no documented equivalent in Semrush's v4 API and will be removed from the native toolkit.
 
 | Old slug | New slug |
 | --- | --- |
@@ -61,6 +61,18 @@ The table lists all 37 old slugs and their replacements. Tools marked "No v4 rep
 | `SEMRUSH_PLA_COMPETITORS` | No v4 replacement |
 | `SEMRUSH_PLA_COPIES` | No v4 replacement |
 | `SEMRUSH_ACCOUNT_UNITS_BALANCE` | No v4 replacement |
+
+### New tools
+
+Alongside the updated Backlinks and Keyword Metrics tools, we're adding the following tool groups:
+
+| Tool group | New tools | What you can do |
+| --- | --- | --- |
+| Projects | 5 | List, create, view, update, and delete Semrush projects. |
+| Listing Management | 14 | Manage business locations, directory listings, images, and listing details. |
+| Review Management | 7 | Read reviews, manage replies, and configure automatic replies. |
+| Google Business Profile | 10 | View metrics, manage posts and suggestions, and look up categories and attributes. |
+| Map Rank Tracker | 11 | Manage campaigns and view local rankings, heatmaps, and competitors. |
 
 ### Emails to affected users
 
