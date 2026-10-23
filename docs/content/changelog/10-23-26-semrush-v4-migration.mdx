@@ -9,29 +9,18 @@ The native `semrush` toolkit is planned to move from Semrush API v3 to v4 on **N
 <Callout type="warn">
 **Breaking change**
 
-The updated toolkit requires a new Semrush v4 API key. Existing v3 credentials won't work with it, and your connections aren't automatically converted. Reconnect your own accounts, and ask any users who connect their own Semrush accounts to reconnect after the update.
-
-The exact cutover time, timezone, and impact on pinned toolkit versions are still being confirmed.
+The updated toolkit requires a Semrush v4 API key. Existing v3 credentials and connections won't work with it. You or your users will need a new v4 key and must reconnect after the update.
 </Callout>
 
-### What's changing
-
-The update removes all **37 existing v3 tools**. Twelve have a v4 replacement, including partial replacements, and 25 have no documented v4 equivalent. The new toolkit registers **61 tools**: 59 v4 product operations and two location-validation helpers.
-
-The v4 operations cover Backlinks, Keyword Metrics, Projects, Listing Management, Review Management, Google Business Profile, and Map Rank Tracker. The separate `semrush_mcp` toolkit is outside this change.
-
-Some domain, advertising, and PLA reports remain available from Semrush through v3. They're being removed from this Composio toolkit because it will support v4 only.
+You can also use the separate `semrush_mcp` toolkit in the interim. Its setup and available tools differ from the native toolkit.
 
 ### Reconnect your Semrush accounts
 
-1. [Create a new Semrush v4 API key](https://developer.semrush.com/api/v4/get-started/quick-start/#get-api-key). Keep your current connection until the updated toolkit is available.
-2. After the update, reconnect Semrush in Composio using the v4 key. If your app connects accounts for your users, ask them to reconnect with their own v4 keys.
-3. Replace any explicit references to the old tool slugs using the tables below. Remove dependencies on tools with no replacement.
-4. Test the affected workflows with the updated toolkit before resuming them.
+[Get a new Semrush v4 API key](https://developer.semrush.com/api/v4/get-started/quick-start/#get-api-key), then reconnect Semrush to Composio using that key after the update. Keep your current connection until then.
 
-### Tools with v4 replacements
+### Old and new tool slugs
 
-These are replacement operations, not compatibility aliases. Inputs and responses change, and some replacements provide only part of the previous functionality. Check the updated tool schemas and [Semrush's v4 API reference](https://developer.semrush.com/api/v4/) when updating your calls.
+The table lists all 37 old slugs and their replacements. Tools marked "No v4 replacement" have no documented equivalent in Semrush's v4 API and will be removed from the native toolkit. Some v3-only reports remain available from Semrush, but this toolkit is moving to v4 only.
 
 | Old slug | New slug |
 | --- | --- |
@@ -47,40 +36,10 @@ These are replacement operations, not compatibility aliases. Inputs and response
 | `SEMRUSH_REFERRING_IPS` | `SEMRUSH_LIST_REFERRING_IPS` |
 | `SEMRUSH_KEYWORD_DIFFICULTY` | `SEMRUSH_GET_KEYWORD_METRICS` |
 | `SEMRUSH_KEYWORD_OVERVIEW_ONE_DATABASE` | `SEMRUSH_GET_KEYWORD_METRICS` |
-
-For example, replace the old slug in your tool selection:
-
-**Before:**
-
-```json
-{"tools": ["SEMRUSH_BACKLINKS_OVERVIEW"]}
-```
-
-**After:**
-
-```json
-{"tools": ["SEMRUSH_GET_BACKLINKS_OVERVIEW"]}
-```
-
-These fragments show the slug change only. Update the arguments and response handling to match the replacement tool's schema.
-
-### Tools removed without v4 replacements
-
-These tools have no documented equivalent in Semrush API v4. Reconnecting with a new key won't restore their functionality in the updated toolkit.
-
-**Backlinks**
-
-| Old slug | New slug |
-| --- | --- |
 | `SEMRUSH_CATEGORIES` | No v4 replacement |
 | `SEMRUSH_CATEGORIES_PROFILE` | No v4 replacement |
 | `SEMRUSH_REFERRING_DOMAINS_BY_COUNTRY` | No v4 replacement |
 | `SEMRUSH_TLD_DISTRIBUTION` | No v4 replacement |
-
-**Keyword reports**
-
-| Old slug | New slug |
-| --- | --- |
 | `SEMRUSH_BATCH_KEYWORD_OVERVIEW` | No v4 replacement |
 | `SEMRUSH_BROAD_MATCH_KEYWORD` | No v4 replacement |
 | `SEMRUSH_KEYWORD_OVERVIEW_ALL_DATABASES` | No v4 replacement |
@@ -89,11 +48,6 @@ These tools have no documented equivalent in Semrush API v4. Reconnecting with a
 | `SEMRUSH_PAID_RESULTS` | No v4 replacement |
 | `SEMRUSH_PHRASE_QUESTIONS` | No v4 replacement |
 | `SEMRUSH_RELATED_KEYWORDS` | No v4 replacement |
-
-**Domain, advertising, and PLA reports**
-
-| Old slug | New slug |
-| --- | --- |
 | `SEMRUSH_ADS_COPIES` | No v4 replacement |
 | `SEMRUSH_COMPETITORS_IN_ORGANIC_SEARCH` | No v4 replacement |
 | `SEMRUSH_COMPETITORS_IN_PAID_SEARCH` | No v4 replacement |
@@ -106,11 +60,10 @@ These tools have no documented equivalent in Semrush API v4. Reconnecting with a
 | `SEMRUSH_DOMAIN_VS_DOMAIN` | No v4 replacement |
 | `SEMRUSH_PLA_COMPETITORS` | No v4 replacement |
 | `SEMRUSH_PLA_COPIES` | No v4 replacement |
-
-**Account utility**
-
-| Old slug | New slug |
-| --- | --- |
 | `SEMRUSH_ACCOUNT_UNITS_BALANCE` | No v4 replacement |
 
-If a removed report is essential to your workflow, contact [Composio support](mailto:support@composio.dev) before migrating.
+### Emails to affected users
+
+We're planning an initial email to affected users on October 23, 2026, followed by a direct reminder before the November 1 update.
+
+If you have any issues, contact [Composio support](mailto:support@composio.dev).
