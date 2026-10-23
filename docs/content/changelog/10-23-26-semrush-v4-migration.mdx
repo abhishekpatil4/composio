@@ -12,8 +12,6 @@ The native [Semrush toolkit](/toolkits/semrush) is planned to move from Semrush 
 The updated toolkit requires a Semrush v4 API key. Existing v3 credentials and connections won't work with it. You or your users will need a new v4 key and must reconnect after the update.
 </Callout>
 
-Alternatively, you can use the [Semrush MCP toolkit](/toolkits/semrush_mcp). Its setup and available tools differ from the native toolkit.
-
 ### Reconnect your Semrush accounts
 
 [Get a new Semrush v4 API key](https://developer.semrush.com/api/v4/get-started/quick-start/#get-api-key), then reconnect Semrush to Composio using that key after the update. Keep your current connection until then.
@@ -73,6 +71,95 @@ Alongside the updated Backlinks and Keyword Metrics tools, we're adding the foll
 | Review Management | 7 | Read reviews, manage replies, and configure automatic replies. |
 | Google Business Profile | 10 | View metrics, manage posts and suggestions, and look up categories and attributes. |
 | Map Rank Tracker | 11 | Manage campaigns and view local rankings, heatmaps, and competitors. |
+
+<details>
+<summary>Projects tool slugs (5)</summary>
+
+| Tool slug | Description |
+| --- | --- |
+| `SEMRUSH_LIST_PROJECTS` | List Projects |
+| `SEMRUSH_GET_PROJECT` | Get Project |
+| `SEMRUSH_CREATE_PROJECT` | Create Project |
+| `SEMRUSH_UPDATE_PROJECT` | Update Project |
+| `SEMRUSH_DELETE_PROJECT` | Delete Project |
+
+</details>
+
+<details>
+<summary>Listing Management tool slugs (14)</summary>
+
+| Tool slug | Description |
+| --- | --- |
+| `SEMRUSH_CREATE_LISTING_MANAGEMENT_LOCATION` | Create Location |
+| `SEMRUSH_UPDATE_LISTING_MANAGEMENT_LOCATION` | Update Location |
+| `SEMRUSH_GET_LISTING_MANAGEMENT_LOCATION` | Get Location |
+| `SEMRUSH_LIST_LISTING_MANAGEMENT_LOCATIONS` | Get Locations |
+| `SEMRUSH_DELETE_LISTING_MANAGEMENT_LOCATION` | Delete Location |
+| `SEMRUSH_LIST_LOCATION_LISTINGS` | Get Listings |
+| `SEMRUSH_DISABLE_LOCATION_LISTING` | Disable Listing |
+| `SEMRUSH_ENABLE_LOCATION_LISTING` | Enable Listing |
+| `SEMRUSH_CREATE_LOCATION_IMAGE` | Create Image |
+| `SEMRUSH_LIST_LOCATION_IMAGES` | Get Images |
+| `SEMRUSH_UPDATE_LOCATION_IMAGE` | Update Image |
+| `SEMRUSH_DELETE_LOCATION_IMAGE` | Delete Image |
+| `SEMRUSH_LIST_LOCATION_CATEGORIES` | Get Categories |
+| `SEMRUSH_LIST_LOCATION_PAYMENT_OPTIONS` | Get Payment Options |
+
+</details>
+
+<details>
+<summary>Review Management tool slugs (7)</summary>
+
+| Tool slug | Description |
+| --- | --- |
+| `SEMRUSH_LIST_REVIEWS` | Get Reviews |
+| `SEMRUSH_GET_REVIEW_OVERVIEW` | Get Review Overview |
+| `SEMRUSH_ADD_REVIEW_COMMENT` | Add Review Comment |
+| `SEMRUSH_UPDATE_REVIEW_COMMENT` | Update Review Comment |
+| `SEMRUSH_DELETE_REVIEW_COMMENT` | Delete Review Comment |
+| `SEMRUSH_GET_REVIEW_AUTO_REPLY_CONFIG` | Get Auto-Reply Config |
+| `SEMRUSH_UPDATE_REVIEW_AUTO_REPLY_CONFIG` | Update Auto-Reply Config |
+
+</details>
+
+<details>
+<summary>Google Business Profile tool slugs (10)</summary>
+
+| Tool slug | Description |
+| --- | --- |
+| `SEMRUSH_LIST_GBP_CATEGORIES` | Get GBP Categories |
+| `SEMRUSH_LIST_GBP_ATTRIBUTES` | Get GBP Attributes |
+| `SEMRUSH_GET_GBP_METRICS` | Get GBP Metrics |
+| `SEMRUSH_LIST_GBP_POSTS` | Get GBP Posts |
+| `SEMRUSH_CREATE_GBP_POST` | Create GBP Post |
+| `SEMRUSH_UPDATE_GBP_POST` | Update GBP Post |
+| `SEMRUSH_DELETE_GBP_POST` | Delete GBP Post |
+| `SEMRUSH_LIST_GBP_SUGGESTIONS` | Get GBP Suggestions |
+| `SEMRUSH_DECIDE_GBP_SUGGESTION` | Manage GBP Suggestion |
+| `SEMRUSH_LIST_GBP_ADDITIONAL_HOUR_TYPES` | Get More Hour Types |
+
+</details>
+
+<details>
+<summary>Map Rank Tracker tool slugs (11)</summary>
+
+| Tool slug | Description |
+| --- | --- |
+| `SEMRUSH_MAP_RANK_TRACKER_GET_CAMPAIGN` | Get Campaign |
+| `SEMRUSH_MAP_RANK_TRACKER_LIST_CAMPAIGNS` | Get Campaigns |
+| `SEMRUSH_MAP_RANK_TRACKER_GET_KEYWORD_STATUSES` | Get Keyword Statuses |
+| `SEMRUSH_MAP_RANK_TRACKER_GET_HEATMAP` | Get Heatmap |
+| `SEMRUSH_MAP_RANK_TRACKER_GET_METRICS` | Get Metrics |
+| `SEMRUSH_MAP_RANK_TRACKER_LIST_TOP_COMPETITORS` | Get Top Competitors |
+| `SEMRUSH_MAP_RANK_TRACKER_CREATE_CAMPAIGN` | Create Campaign |
+| `SEMRUSH_MAP_RANK_TRACKER_UPDATE_CAMPAIGN` | Update Campaign |
+| `SEMRUSH_MAP_RANK_TRACKER_DELETE_CAMPAIGN` | Delete Campaign |
+| `SEMRUSH_MAP_RANK_TRACKER_COLLECT_CAMPAIGN` | Collect Campaign |
+| `SEMRUSH_MAP_RANK_TRACKER_GET_USER_LIMITS` | Get User Limits |
+
+</details>
+
+You can also use the [Semrush MCP toolkit](/toolkits/semrush_mcp).
 
 ### Emails to affected users
 
